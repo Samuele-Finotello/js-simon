@@ -22,3 +22,22 @@ numbersList.appendChild(listItem2);
 numbersList.appendChild(listItem3);
 numbersList.appendChild(listItem4);
 numbersList.appendChild(listItem5);
+
+let seconds = 10;
+const countdown = document.getElementById('countdown');
+const answerForm = document.getElementById('answers-form');
+const instructions = document.getElementById('instructions');
+const idInterval = setInterval(() => {
+  if (seconds === 0) {
+    clearInterval(idInterval);
+    answerForm.classList.remove('d-none');
+    answerForm.classList.add('d-inline-block');
+    countdown.classList.add('d-none');
+    numbersList.classList.add('d-none');
+    instructions.innerText = 'Inserisci i numeri che ti ricordi nell\'ordine che vuoi';
+  }
+  else {
+    countdown.innerText = seconds;
+  }
+  seconds--;
+}, 1000);
