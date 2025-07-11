@@ -80,5 +80,17 @@ button.addEventListener('click', (event) => {
     }
   }
   console.log(count, right.toString())
+
+  const message = document.getElementById('message');
+  let points;
+  if (count < 5) {
+    points = `Hai totalizzato ${count} punti: ${right.toString()}, hai perso`
+  }
+  else if (count === 5) {
+    points = `Hai totalizzato ${count} punti: ${right.toString()}, hai vinto`
+    message.classList.add('text-success');
+  }
+
+  message.innerText = points;
 })
 
