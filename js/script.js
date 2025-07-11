@@ -11,3 +11,8 @@ const listItem3 = document.createElement('li');
 const listItem4 = document.createElement('li');
 const listItem5 = document.createElement('li');
 
+listItem1.append(numRandom());
+listItem2.append(numRandom());
+listItem3.append(numRandom());
+listItem4.append(numRandom());
+listItem5.append(numRandom());
