@@ -16,3 +16,9 @@ listItem2.append(numRandom());
 listItem3.append(numRandom());
 listItem4.append(numRandom());
 listItem5.append(numRandom());
+
+numbersList.appendChild(listItem1);
+numbersList.appendChild(listItem2);
+numbersList.appendChild(listItem3);
+numbersList.appendChild(listItem4);
+numbersList.appendChild(listItem5);
