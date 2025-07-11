@@ -49,7 +49,7 @@ arrayNumbers.push(listItem2.innerText);
 arrayNumbers.push(listItem3.innerText);
 arrayNumbers.push(listItem4.innerText);
 arrayNumbers.push(listItem5.innerText);
-console.log(arrayNumbers)
+console.log(arrayNumbers);
 
 const button = document.querySelector('.btn');
 button.addEventListener('click', (event) => {
@@ -67,6 +67,18 @@ button.addEventListener('click', (event) => {
   arrayAnswers.push(num3);
   arrayAnswers.push(num4);
   arrayAnswers.push(num5);
-  console.log(arrayAnswers)
+  console.log(arrayAnswers);
+
+  let count = 0;
+  let right = [];
+  for (let i = 0; i < arrayNumbers.length; i++) {
+    for (let j = 0; j < arrayAnswers.length; j++) {
+      if (arrayNumbers[i] === arrayAnswers[j]) {
+        count++;
+        right.push(arrayAnswers[j]);
+      }
+    }
+  }
+  console.log(count, right.toString())
 })
 
