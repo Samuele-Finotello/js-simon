@@ -96,15 +96,23 @@ button.addEventListener('click', (event) => {
 
   const message = document.getElementById('message');
   let points;
-  if (count < 5) {
-    points = `Hai totalizzato ${count} punti: ${right.toString()}, hai perso`
+  if (count == 1) {
+    points = `Hai totalizzato ${count} punto: (${right.toString()}) hai perso`
+  }
+  else if (count == 0) {
+    points = `Hai totalizzato ${count} punti: ${right.toString()} hai perso`
+  }
+  else if (count < 5) {
+    points = `Hai totalizzato ${count} punti: (${right.toString()}) hai perso`
   }
   else if (count === 5) {
-    points = `Hai totalizzato ${count} punti: ${right.toString()}, hai vinto`
+    points = `Hai totalizzato ${count} punti: (${right.toString()}) hai vinto`
     message.classList.remove('text-danger');
     message.classList.add('text-success');
   }
 
   message.innerText = points;
 })
+
+
 
