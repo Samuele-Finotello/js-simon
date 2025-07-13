@@ -1,6 +1,19 @@
-const numRandom = () => {
-  num = Math.floor(Math.random() * 50) + 1;
-  return num;
+let num1 = Math.floor(Math.random() * 50) + 1;
+let num2 = Math.floor(Math.random() * 50) + 1;
+while (num2 === num1) {
+  num2 = Math.floor(Math.random() * 50) + 1;
+}
+let num3 = Math.floor(Math.random() * 50) + 1;
+while (num3 === num1 || num3 === num2) {
+  num3 = Math.floor(Math.random() * 50) + 1;
+}
+let num4 = Math.floor(Math.random() * 50) + 1;
+while (num4 === num1 || num4 === num2 || num4 === num3) {
+  num4 = Math.floor(Math.random() * 50) + 1;
+}
+let num5 = Math.floor(Math.random() * 50) + 1;
+while (num5 === num1 || num5 === num2 || num5 === num3 || num5 === num4) {
+  num5 = Math.floor(Math.random() * 50) + 1;
 }
 
 const numbersList = document.getElementById('numbers-list');
@@ -11,11 +24,11 @@ const listItem3 = document.createElement('li');
 const listItem4 = document.createElement('li');
 const listItem5 = document.createElement('li');
 
-listItem1.append(numRandom());
-listItem2.append(numRandom());
-listItem3.append(numRandom());
-listItem4.append(numRandom());
-listItem5.append(numRandom());
+listItem1.append(num1);
+listItem2.append(num2);
+listItem3.append(num3);
+listItem4.append(num4);
+listItem5.append(num5);
 
 numbersList.appendChild(listItem1);
 numbersList.appendChild(listItem2);
@@ -88,6 +101,7 @@ button.addEventListener('click', (event) => {
   }
   else if (count === 5) {
     points = `Hai totalizzato ${count} punti: ${right.toString()}, hai vinto`
+    message.classList.remove('text-danger');
     message.classList.add('text-success');
   }
 
